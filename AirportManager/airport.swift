@@ -39,4 +39,13 @@ class Airport {
     func getFlight (number: Int) -> Flight {
         return _flights[number]!
     }
+    
+    func addFlight (flight: Flight) {
+        _flights[flight._number] = flight
+    }
+    
+    func removeFlight (flight: Flight) {
+        _flights.removeValue(forKey: flight.number)
+    }
+    
 }
